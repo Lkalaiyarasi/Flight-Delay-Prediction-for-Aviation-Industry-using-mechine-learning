@@ -1,0 +1,53 @@
+<!DOCTYPE >
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <title>flightdelay</title>
+
+</head>
+<body>
+<div class="header">
+<h1>Prediction of Flight delay </h1>
+</div>
+<div class="MAIN">
+<form action ="{{ url_for('predict')}}" method = "post">
+
+    <p> Enter the flight number : <span><input type ="text"  name = "name" id="name"></span></p>
+
+    <p> Month : <span><input type = "text" name = "month" id="month"/></span></p>
+
+    <p> day of month : <span><input type = "text" name = "dayofmonth" id="dayofmonth"/></span></p>
+
+    <p> day  of week : <span><input type = "text" name = "dayofweek" id="dayofweek"/></span></p>
+
+    <label for = "origin">origin</label>
+     <select name = "origin" id="origin">
+         <option value = "msp" id="origin1">MSP</option>
+         <option value = "dtw" id="origin2">DTW</option>
+         <option value = "jfk" id="origin3">JFK</option>
+         <option value = "sea" id="origin4">SEA</option>
+         <option value = "alt" id="origin5">ALT</option>
+     </select>
+<br><br>
+    <label for = "destination">destination</label>
+     <select name= "destination" id="destination">
+      <option value = "msp">MSP</option>
+         <option value = "dtw">DTW</option>
+         <option value = "jfk">JFK</option>
+         <option value = "sea">SEA</option>
+         <option value = "alt">ALT</option>
+     </select>
+<br><br>
+    <p> Scheduled departure time: <span><input type = "text" name = "dept" id="dept"/></span></p>
+    <p> Scheduled arrival time : <span><input type = "text" name = "arrtime" id="arrtime"/></span></p>
+    <p> actual departure time : <span><input type = "text" name = "actdept" id="actdept"/></span></p>
+    <button type="submit" value="submit">submit</button>
+
+
+</form>
+    <h1>{{ showcase }}</h1>
+</div>
+
+</body>
+
+</html>
